@@ -1,0 +1,29 @@
+<div>
+    <button (click)="crear()" class="btn-color btn btn-primary btn-lg btn-block">Crear Producto</button>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Observaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos">
+            <th scope="row">{{producto.id}}</th>
+            <td>{{producto.name}}</td>
+            <td>{{producto.image}}</td>
+            <td>{{producto.price}}</td>
+            <td>{{producto.quantity}}</td>
+            <td>{{producto.observations}}</td>
+            <a class="btn btn-primary btn-sm" routerLink="/mapa">Ver</a>
+            <a class="btn btn-success btn-sm" routerLink="/form/{{producto.id}}">Editar</a>
+            <a class="btn btn-danger btn-sm">Eliminar</a>
+        </tr>
+    </tbody>
+</table>

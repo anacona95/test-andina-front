@@ -1,0 +1,34 @@
+<h1 class="subheader">Productos</h1>
+
+<form class="mid-form" [formGroup]="formularioProductos">
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="nombre">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Imagen</mat-label>
+        <input matInput type="file" formControlName="imagen">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" formControlName="precio">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input matInput type="number" formControlName="cantidad">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Ciudades Disponibles</mat-label>
+        <mat-select [formControl]="ciudadesDisponibles" multiple>
+            <mat-option *ngFor="let ciudad of ciudadesList" [value]="ciudad.id">{{ciudad.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Observaciones</mat-label>
+        <textarea matInput formControlName="observaciones"></textarea>
+    </mat-form-field>
+    <div class="clearfix"></div>
+    <button type=" button" class="btn btn-success" [disabled]="!formularioProductos.valid" (click)="sendForm()">
+        Guardar
+      </button>
+</form>
