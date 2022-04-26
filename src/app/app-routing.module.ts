@@ -4,12 +4,15 @@ import { AsignarCiudadesComponent } from './componentes/asignar-ciudades/asignar
 import { ErrorComponent } from './componentes/error/error.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
 import { HomeComponent } from './componentes/home/home.component';
-import { UploadComponent } from './componentes/upload/upload.component';
+import { MapCiudadesComponent } from './componentes/map-ciudades/map-ciudades.component';
+
+
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'mapa', component: UploadComponent},
+  {path: 'mapa/:id', component: MapCiudadesComponent},
   {path: 'formulario', component: FormularioComponent },
   {path: 'formulario/:id', component: FormularioComponent },
   {path: 'asignarCiudades/:data', component: AsignarCiudadesComponent },

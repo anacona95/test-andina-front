@@ -6,13 +6,14 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormularioComponent } from './componentes/formulario/formulario.component';
-import { UploadComponent } from './componentes/upload/upload.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatSelectModule} from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsignarCiudadesComponent } from './componentes/asignar-ciudades/asignar-ciudades.component';
+import { MapCiudadesComponent } from './componentes/map-ciudades/map-ciudades.component';
+
+
 
 
 
@@ -23,9 +24,10 @@ import { AsignarCiudadesComponent } from './componentes/asignar-ciudades/asignar
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    MapCiudadesComponent,
     FormularioComponent,
-    UploadComponent,
     AsignarCiudadesComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { AsignarCiudadesComponent } from './componentes/asignar-ciudades/asignar
   ],
   exports: [
     MatTableModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     
   ],

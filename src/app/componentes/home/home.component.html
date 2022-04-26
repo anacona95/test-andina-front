@@ -21,7 +21,7 @@
             <td>{{producto.price}}</td>
             <td>{{producto.quantity}}</td>
             <td>{{producto.observations}}</td>
-            <a class="btn btn-primary btn-sm" routerLink="/mapa">Ver</a>
+            <a class="btn btn-primary btn-sm" [routerLink]="['/mapa', producto.id]">Ver</a>
             <a class="btn btn-success btn-sm" routerLink="/form/{{producto.id}}">Editar</a>
             <a class="btn btn-danger btn-sm">Eliminar</a>
         </tr>

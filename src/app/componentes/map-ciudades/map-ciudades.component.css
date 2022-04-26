@@ -1,0 +1,9 @@
+#map {
+    height: 500px;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 20px;
+    background-color: cadetblue;
+}
